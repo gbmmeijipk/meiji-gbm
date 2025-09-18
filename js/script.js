@@ -1,4 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Popup Advertisement
+    const popup = document.getElementById('popup-ad');
+    const closePopup = document.querySelector('.close-popup');
+    
+    // Show popup after 3 seconds
+    setTimeout(function() {
+        popup.style.display = 'block';
+    }, 3000);
+    
+    // Close popup when clicking X
+    if (closePopup) {
+        closePopup.addEventListener('click', function() {
+            popup.style.display = 'none';
+        });
+    }
+    
+    // Close popup when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target == popup) {
+            popup.style.display = 'none';
+        }
+    });
+    
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('nav ul');
@@ -106,47 +129,54 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Form validation
-    const contactForm = document.getElementById('contactForm');
     
+    // Contact Form Submission
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+            e.preventDefault(); // Prevent default form submission
             
-            // Basic form validation
-            let isValid = true;
-            const requiredFields = contactForm.querySelectorAll('[required]');
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const company = document.getElementById('company').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
             
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    isValid = false;
-                    field.classList.add('error');
-                } else {
-                    field.classList.remove('error');
-                }
-            });
+            // Basic validation
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all required fields.');
+                return false;
+            }
             
             // Email validation
-            const emailField = contactForm.querySelector('input[type="email"]');
-            if (emailField && emailField.value.trim()) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailField.value.trim())) {
-                    isValid = false;
-                    emailField.classList.add('error');
-                }
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
             }
             
-            if (isValid) {
-                // In a real application, you would send the form data to a server here
-                // For this demo, we'll just show a success message
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            } else {
-                alert('Please fill in all required fields correctly.');
-            }
+            // Format email body
+            const emailBody = `Name: ${name}%0D%0A`+
+                            `Email: ${email}%0D%0A`+
+                            `Phone: ${phone}%0D%0A`+
+                            `Company: ${company}%0D%0A`+
+                            `Subject: ${subject}%0D%0A%0D%0A`+
+                            `Message:%0D%0A${message}`;
+            
+            // Create mailto link with subject and body
+            const mailtoLink = `mailto:info@meiji-gbm.com.pk?subject=Website Contact: ${subject}&body=${emailBody}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            alert('Thank you for your message. We will contact you shortly.');
+            contactForm.reset(); // Reset form after submission
         });
     }
+
+    // No duplicate form validation needed as it's handled above
 
     // Testimonial slider auto-scroll
     const testimonialSlider = document.querySelector('.testimonial-slider');
