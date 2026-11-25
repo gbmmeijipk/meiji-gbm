@@ -47,7 +47,11 @@
     info.appendChild(ul);
     const a=$("a","btn btn-primary","Product inquiry");a.href="#contact";
     a.addEventListener("click",()=>{const s=document.querySelector('select[name="product"]');if(s){[...s.options].forEach(o=>{if(o.text===p.name.replace("KIDS PLUS","KIDS+ PLUS").replace("MEIJI-PRE","MEIJI PRE"))s.value=o.value})}});
-    info.appendChild(a);
+    const acts=$("div","pd-actions");acts.appendChild(a);
+    const sh=$("a","shop-btn");sh.href="https://meijistore.com/";sh.target="_blank";sh.rel="noopener";
+    sh.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2a1 1 0 0 0 1 .8h8.9a1 1 0 0 0 1-.8L20 7H6"/></svg>';
+    sh.appendChild(document.createTextNode("Shop Now"));acts.appendChild(sh);
+    info.appendChild(acts);
     stage.append(vis,info);
   }
   function auto(){clearInterval(timer);if(reduce)return;timer=setInterval(()=>show((cur+1)%P.length),9000)}
