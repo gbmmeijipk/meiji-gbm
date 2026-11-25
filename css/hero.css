@@ -20,17 +20,18 @@ body[dir="rtl"] .hero-animated .hero-text{text-align:right}
 .hero-ring.r2{width:100%;aspect-ratio:1;border-color:rgba(240,162,175,.3);animation:spin 60s linear infinite reverse}
 .hero-ring:after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;border-radius:50%;background:#c8102e;box-shadow:0 0 16px #c8102e}
 .hero-glow{position:absolute;left:50%;top:50%;width:60%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%);animation:pulse 4s ease-in-out infinite}
-.hp{position:absolute;left:50%;top:50%;width:var(--w,20%);margin:0;z-index:var(--z,1);transform:translate(-50%,-50%) translate(var(--x),var(--y)) rotate(var(--r)) scale(var(--s,1));opacity:0;animation:hpIn 1s cubic-bezier(.2,.9,.25,1.1) var(--d) forwards}
+.hp{position:absolute;left:50%;top:50%;width:var(--w,17%);margin:0;z-index:var(--z,1);transform:translate(-50%,-50%) translate(var(--x),var(--y)) rotate(var(--r)) scale(var(--s,1));opacity:0;animation:hpIn 1s cubic-bezier(.2,.9,.25,1.1) var(--d) forwards}
 .hp img{width:100%;height:auto;filter:drop-shadow(0 22px 22px rgba(0,0,0,.4));animation:floaty 5s ease-in-out var(--fd) infinite;transition:transform .3s}
 .hp:hover{z-index:9}.hp:hover img{transform:scale(1.08)}
 .hp figcaption{position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);white-space:nowrap;font-size:10px;font-weight:800;letter-spacing:.14em;color:#fff;background:rgba(200,16,46,.9);padding:3px 9px;border-radius:20px;opacity:0;transition:opacity .25s}
 .hp:hover figcaption{opacity:1}
-.hp.p1{--x:-200%;--y:8%;--r:-10deg;--s:.78;--z:1;--d:.5s;--fd:0s}
-.hp.p2{--x:-120%;--y:0%;--r:-6deg;--s:.86;--z:2;--d:.65s;--fd:.5s}
-.hp.p3{--x:-40%;--y:-4%;--r:-3deg;--s:.92;--z:3;--d:.8s;--fd:1s}
-.hp.p4{--x:40%;--y:0%;--r:0deg;--s:1.12;--z:5;--d:.95s;--fd:1.5s}
-.hp.p5{--x:120%;--y:-3%;--r:4deg;--s:.9;--z:3;--d:1.1s;--fd:2s}
-.hp.p6{--x:200%;--y:6%;--r:9deg;--s:.8;--z:2;--d:1.25s;--fd:2.5s}
+.hp.p1{--x:-240%;--y:8%;--r:-11deg;--s:.78;--z:1;--d:.5s;--fd:0s}
+.hp.p2{--x:-160%;--y:2%;--r:-7deg;--s:.86;--z:2;--d:.65s;--fd:.4s}
+.hp.p3{--x:-80%;--y:-3%;--r:-3deg;--s:.94;--z:3;--d:.8s;--fd:.8s}
+.hp.p4{--x:0%;--y:0%;--r:0deg;--s:1.15;--z:5;--d:.95s;--fd:1.2s}
+.hp.p5{--x:80%;--y:-3%;--r:3deg;--s:.94;--z:3;--d:1.1s;--fd:1.6s}
+.hp.p6{--x:160%;--y:2%;--r:7deg;--s:.86;--z:2;--d:1.25s;--fd:2s}
+.hp.p7{--x:240%;--y:8%;--r:11deg;--s:.78;--z:1;--d:1.4s;--fd:2.4s}
 .hero-animated .hero-mark{z-index:2}
 .scroll-cue{position:absolute;left:50%;bottom:16px;width:22px;height:36px;border:2px solid rgba(255,255,255,.5);border-radius:14px;transform:translateX(-50%)}
 .scroll-cue:after{content:"";position:absolute;left:50%;top:6px;width:4px;height:7px;margin-left:-2px;border-radius:3px;background:#fff;animation:cue 1.6s infinite}

@@ -1,6 +1,9 @@
 // Animated MEIJI product detail explorer (content from meiji-gbm.com.pk/products.html)
 (function(){
   const P=[
+    {id:"mami",name:"MEIJI MAMILAC",age:"Pregnancy & breastfeeding",type:"Maternal formula",img:"hero-mamilac.png",
+     desc:"A formula for pregnant and breastfeeding women, in vanilla flavour. Imported, 350 g.",
+     f:["Formula for pregnant and breastfeeding women","Contains folic acid, iron and calcium","Contains DHA, FOS, vitamin A and zinc","Gluten free","Quick dissolving","Vanilla flavour"]},
     {id:"fmt",name:"MEIJI FM-T",age:"0 – 6 months",type:"Infant formula",img:"hero-fmt.png",
      desc:"An infant formula fortified with DHA, with a granulated texture that dissolves easily.",
      f:["Fortified with DHA for brain and retinal development","Milk phospholipids help concentrate DHA in the body","Balanced omega-3 (alpha-linolenic) and omega-6 (linoleic) ratio, precursors of DHA and ARA","Nucleotides, also found in mother's milk, support the immune system","FOS promotes beneficial bifidobacteria and inhibits pathogenic bacteria","Balanced amounts of other vitamins and minerals","Granulated to dissolve easily"]},
