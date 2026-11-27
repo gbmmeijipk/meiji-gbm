@@ -223,7 +223,13 @@ body[dir="rtl"] .ceo-name:before{left:auto;right:0}
 @media (prefers-reduced-motion:reduce){.careers-section:before,.careers-section:after{animation:none}}
 
 /* Nav: hamburger up to 1100px, compact brand up to 1320px (9 links) */
-@media(min-width:1101px) and (max-width:1320px){.brand span{display:none}}
+@media(min-width:1101px) and (max-width:1380px){
+  .nav-wrap{width:min(100% - 28px,1360px)}
+  .brand{gap:8px}.brand span{display:block;font-size:11px;line-height:1.25}
+  .main-nav{gap:11px;font-size:11.5px}.main-nav>a{font-size:11.5px}
+  .nav-contact{padding:10px 12px}
+  .language-label select{padding:8px 4px;font-size:11.5px}
+}
 @media(max-width:1100px){
   .brand span{display:block}
   .nav-wrap{min-height:72px}
@@ -239,3 +245,27 @@ body[dir="rtl"] .ceo-name:before{left:auto;right:0}
 /* Prevent sideways scroll from off-screen animated elements */
 html,body{overflow-x:clip}
 .hero,.profile-section,.ceo-section,.careers-section,.map-section,.videos-section{overflow-x:clip}
+
+/* News & Events hidden (remove the hidden attribute in index.html to show again) */
+[hidden]{display:none!important}
+
+/* Header company name: larger and bolder */
+.brand span{font-size:16px;font-weight:900;letter-spacing:.05em;color:#102b46;line-height:1.2}
+.brand span small{font-size:13px;font-weight:800;color:#102b46;letter-spacing:.1em;margin-top:3px}
+@media(min-width:1101px) and (max-width:1380px){
+  .brand span{font-size:13.5px;letter-spacing:.03em}.brand span small{font-size:11.5px;letter-spacing:.06em}
+  .main-nav{gap:9px}.main-nav>a,.main-nav{font-size:11px}
+}
+@media(max-width:1100px){.brand span{font-size:14px}.brand span small{font-size:12px}}
+@media(max-width:420px){.brand span{font-size:12px}.brand span small{font-size:10.5px}.brand img{width:62px}}
+
+/* Justified body text */
+.notice-box p,
+.section p,.section li,.product-info p,.pd-desc,.pd-list li,.map-card address,.footer p,footer p,.distribution-section p,.contact-section p{text-align:justify;text-justify:inter-word;hyphens:manual;-webkit-hyphens:manual}
+/* keep short labels, headings and buttons as they are */
+.eyebrow,.heading-note,.pd-type,.pd-age,.ceo-name,.ceo-role,.career-ok,.map-lines a,.product-tag,.video-meta span,.shop-btn,.btn,.section-heading p{text-align:start;hyphens:manual}
+.career-form>p{text-align:justify}
+html[dir="rtl"] .section p,body[dir="rtl"] .section p{text-align:justify}
+
+/* Footer logo: no white box */
+.footer-brand img{background:none!important;padding:0!important;width:110px;height:auto}
