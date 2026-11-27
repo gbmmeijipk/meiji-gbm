@@ -197,3 +197,45 @@ body[dir="rtl"] .ceo-name:before{left:auto;right:0}
 @keyframes shopShine{0%,55%{left:-80%}100%{left:140%}}
 @keyframes cartWiggle{0%,60%,100%{transform:rotate(0)}68%{transform:rotate(-14deg)}76%{transform:rotate(12deg)}84%{transform:rotate(-8deg)}92%{transform:rotate(5deg)}}
 @media (prefers-reduced-motion:reduce){.shop-btn,.shop-btn:before,.shop-btn svg{animation:none}}
+
+/* Careers */
+.careers-section{position:relative;overflow:hidden;background:linear-gradient(135deg,#071b2f,#102b46 60%,#1b3a5c);color:#fff}
+.careers-section:before,.careers-section:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.careers-section:before{left:-140px;bottom:-140px;width:420px;height:420px;background:radial-gradient(circle,rgba(200,16,46,.45),transparent 65%);animation:pulse 5s ease-in-out infinite}
+.careers-section:after{right:-100px;top:-100px;width:340px;height:340px;border:1px dashed rgba(255,255,255,.2);animation:spin 45s linear infinite}
+.careers-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start}
+.careers-section h2{margin:0 0 16px;font-size:clamp(28px,3.6vw,44px);letter-spacing:-.04em;line-height:1.1}
+.careers-intro{color:#dce6ef;font-size:15px;line-height:1.8;margin:0 0 26px;max-width:560px}
+.career-values{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 6px;padding:0;list-style:none}
+.career-values li{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:14px 16px;font-weight:700;font-size:14px;transition:transform .3s,background .3s,border-color .3s}
+.career-values li:hover{transform:translateY(-5px);background:rgba(200,16,46,.35);border-color:#c8102e}
+.career-values b{flex:none;width:34px;height:34px;border-radius:50%;background:#c8102e;display:grid;place-items:center;font-size:13px}
+.career-form{background:#fff;color:#33475a;border-radius:10px;padding:30px;box-shadow:0 26px 60px rgba(0,0,0,.4);border-top:5px solid #c8102e}
+.career-form h3{margin:0 0 4px;color:#102b46;font-size:21px;letter-spacing:-.02em}
+.career-form>p{margin:0 0 18px;font-size:13px;color:#6b7b8a}
+.career-form label{display:block;margin-bottom:12px;font-size:12px;font-weight:800;color:#102b46;letter-spacing:.04em}
+.career-form input,.career-form select,.career-form textarea{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1.5px solid #d6dee5;border-radius:6px;font:inherit;font-size:14px;color:#26384a;background:#fff;transition:border-color .2s,box-shadow .2s}
+.career-form input:focus,.career-form select:focus,.career-form textarea:focus{outline:none;border-color:#c8102e;box-shadow:0 0 0 3px rgba(200,16,46,.15)}
+.career-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.career-form .btn{width:100%;margin-top:4px}
+.career-ok{margin:12px 0 0;font-size:13px;color:#1a7a43;font-weight:700}
+@media(max-width:900px){.careers-grid{grid-template-columns:1fr;gap:34px}.career-row,.career-values{grid-template-columns:1fr}.career-form{padding:22px}}
+@media (prefers-reduced-motion:reduce){.careers-section:before,.careers-section:after{animation:none}}
+
+/* Nav: hamburger up to 1100px, compact brand up to 1320px (9 links) */
+@media(min-width:1101px) and (max-width:1320px){.brand span{display:none}}
+@media(max-width:1100px){
+  .brand span{display:block}
+  .nav-wrap{min-height:72px}
+  .menu-toggle{display:block;order:3}
+  .main-nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;padding:18px 22px 22px;box-shadow:0 15px 25px rgba(16,43,70,.12);flex-direction:column;align-items:stretch;gap:0;font-size:13px}
+  .main-nav.open{display:flex}
+  .main-nav>a{padding:12px 4px;border-bottom:1px solid #eef1f3;font-size:13px}
+  .main-nav .nav-contact{text-align:center;margin-top:12px;padding:12px}
+  .language-label{padding-top:14px}.language-label select{width:100%;padding:10px}
+}
+@media(min-width:761px) and (max-width:1100px){.brand span{display:block}}
+
+/* Prevent sideways scroll from off-screen animated elements */
+html,body{overflow-x:clip}
+.hero,.profile-section,.ceo-section,.careers-section,.map-section,.videos-section{overflow-x:clip}

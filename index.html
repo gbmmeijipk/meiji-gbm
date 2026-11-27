@@ -20,7 +20,7 @@
       <a class="brand" href="#home" aria-label="Global Brands Marketing home"><img src="assets/images/gbm-logo.png" alt="GBM logo"><span>GLOBAL BRANDS MARKETING <small>(PVT) LTD.</small></span></a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home" data-i18n="navHome">Home</a><a href="#about" data-i18n="navAbout">About Us</a><a href="#profile">Company Profile</a><a href="#ceo">CEO Message</a><a href="#products" data-i18n="navProducts">Our Products</a><a href="#distribution" data-i18n="navDistribution">Distribution</a><a href="#news" data-i18n="navNews">News & Events</a><a class="nav-contact" href="#contact" data-i18n="navContact">Contact Us</a>
+        <a href="#home" data-i18n="navHome">Home</a><a href="#about" data-i18n="navAbout">About Us</a><a href="#profile">Company Profile</a><a href="#ceo">CEO Message</a><a href="#products" data-i18n="navProducts">Our Products</a><a href="#distribution" data-i18n="navDistribution">Distribution</a><a href="#news" data-i18n="navNews">News & Events</a><a href="#careers">Careers</a><a class="nav-contact" href="#contact" data-i18n="navContact">Contact Us</a>
         <label class="language-label"><span class="sr-only">Select language</span><select id="languageSelect" aria-label="Select language"><option value="en">🇬🇧 English</option><option value="ja">🇯🇵 日本語</option><option value="ur">🇵🇰 اردو</option></select></label>
       </nav>
     </div>
@@ -121,6 +121,27 @@
 
     <section class="section news-section" id="news"><div class="container news-panel"><div><p class="eyebrow red" data-i18n="newsEyebrow">NEWS & EVENTS</p><h2 data-i18n="newsTitle">Stay connected with GBM.</h2><p class="muted" data-i18n="newsCopy">Company announcements, product updates and business news will be shared here.</p></div><span class="news-coming" data-i18n="newsComing">Updates coming soon</span></div></section>
 
+    <section class="section careers-section" id="careers">
+      <div class="container careers-grid">
+        <div class="reveal from-left">
+          <p class="eyebrow light">CAREERS</p>
+          <h2>Careers at Global Brands Marketing (Pvt.) Ltd.</h2>
+          <p class="careers-intro">Join a team that works with world class mother and child health-care brands. We aim to maintain the highest level of professionalism, integrity, honesty and fairness, and to win customer satisfaction by a service minded attitude. If that sounds like you, we would like to hear from you.</p>
+          <ul class="career-values"><li class="reveal d0"><b>1</b>Professionalism</li><li class="reveal d1"><b>2</b>Integrity</li><li class="reveal d2"><b>3</b>Honesty</li><li class="reveal d0"><b>4</b>Fairness</li><li class="reveal d1"><b>5</b>Service-minded attitude</li></ul>
+        </div>
+        <form class="career-form reveal from-right" id="careerForm">
+          <h3>Send us your details</h3>
+          <p>Fill in the form and your email app will open with your application ready. Please attach your CV before sending.</p>
+          <div class="career-row"><label>Full name<input name="name" required autocomplete="name"></label><label>Phone<input name="phone" type="tel" required autocomplete="tel"></label></div>
+          <label>Email<input name="email" type="email" required autocomplete="email"></label>
+          <label>Area of interest<select name="role"><option>Sales &amp; Marketing</option><option>Distribution &amp; Logistics</option><option>Customer Service</option><option>Accounts &amp; Finance</option><option>Administration</option><option>Other</option></select></label>
+          <label>About you<textarea name="msg" rows="3" placeholder="Tell us briefly about your experience"></textarea></label>
+          <button class="btn btn-primary" type="submit">Apply Now</button>
+          <p class="career-ok" hidden>Thank you! Your email app should open. If it does not, write to info@meiji-gbm.com.pk.</p>
+        </form>
+      </div>
+    </section>
+
     <section class="section map-section" id="location">
       <div class="container">
         <div class="section-heading"><div><p class="eyebrow red">OUR LOCATION</p><h2>Find us on the map</h2></div><p class="muted heading-note">Visit the Global Brands Marketing head office in Karachi.</p></div>
@@ -152,6 +173,6 @@
     </div>
   </div>
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script src="js/translations.js"></script><script src="js/main.js"></script><script src="js/product-detail.js"></script><script src="js/notice.js"></script><script src="js/reveal.js"></script><script src="js/videos.js"></script>
+  <script src="js/translations.js"></script><script src="js/main.js"></script><script src="js/product-detail.js"></script><script src="js/notice.js"></script><script src="js/reveal.js"></script><script src="js/videos.js"></script><script src="js/careers.js"></script>
 </body>
 </html>
